@@ -4,42 +4,50 @@ const platos = [
     categoria: "especiales",
     descripcion:
       "La bandeja estrella de la casa con cinco favoritos para compartir.",
+    imagen: "img/los-5-furiosos.jpg",
   },
   {
     nombre: "Chaufa Dragon",
     categoria: "arroces",
     descripcion: "Arroz chaufa al wok con pollo, cerdo, huevo y cebolla china.",
+    imagen: "img/chaufa-dragon.jpg",
   },
   {
     nombre: "Aeropuerto Imperial",
     categoria: "especiales",
     descripcion: "Arroz, tallarin y saltado reunidos en una porcion potente.",
+    imagen: "img/aeropuerto-imperial.jpg",
   },
   {
     nombre: "Tallarin al Wok",
     categoria: "tallarines",
     descripcion:
       "Tallarines salteados con verduras frescas y salsa de la casa.",
+    imagen: "img/tallarin-fuego.jpg",
   },
   {
     nombre: "Pollo Tipakay",
     categoria: "pollos",
     descripcion: "Pollo crocante con salsa agridulce estilo chifa.",
+    imagen: "img/pollo-crocante.jpg",
   },
   {
     nombre: "Kam Lu Wantan",
     categoria: "especiales",
     descripcion: "Wantanes crocantes con salsa tamarindo, carnes y verduras.",
+    imagen: "img/kam-lu-wantan.jpg",
   },
   {
     nombre: "Cerdo con Tamarindo",
     categoria: "cerdo",
     descripcion: "Cerdo salteado con salsa de tamarindo y toque ahumado.",
+    imagen: "img/cerdo-char-siu.jpg",
   },
   {
     nombre: "Wantan Crocante",
     categoria: "entradas",
     descripcion: "Entrada clasica para compartir antes del plato fuerte.",
+    imagen: "img/wantanes-furiosos.jpg",
   },
 ];
 
@@ -48,6 +56,7 @@ const furiosos = [
     id: 1,
     nombre: "Chaufa Dragon",
     descripcion: "Arroz chaufa al wok con pollo, cerdo, huevo y cebolla china.",
+    imagen: "img/chaufa-dragon.jpg",
     clase: "furioso-1",
   },
   {
@@ -55,6 +64,7 @@ const furiosos = [
     nombre: "Tallarin Fuego",
     descripcion:
       "Tallarines salteados al wok con verduras, pollo y salsa de la casa.",
+    imagen: "img/tallarin-fuego.jpg",
     clase: "furioso-2",
   },
   {
@@ -62,6 +72,7 @@ const furiosos = [
     nombre: "Pollo Crocante Agridulce",
     descripcion:
       "Trozos de pollo crocante acompanados con salsa de tamarindo y toque picante suave.",
+    imagen: "img/pollo-crocante.jpg",
     clase: "furioso-3",
   },
   {
@@ -69,6 +80,7 @@ const furiosos = [
     nombre: "Cerdo Char Siu",
     descripcion:
       "Cerdo glaseado estilo chifa, servido en laminas y con vegetales salteados.",
+    imagen: "img/cerdo-char-siu.jpg",
     clase: "furioso-4",
   },
   {
@@ -76,6 +88,7 @@ const furiosos = [
     nombre: "Wantanes Furiosos",
     descripcion:
       "Wantanes rellenos, fritos y acompanados por una salsa especial ligeramente picante.",
+    imagen: "img/wantanes-furiosos.jpg",
     clase: "furioso-5",
   },
 ];
@@ -94,6 +107,7 @@ let categoriaActual = "todos";
 function iniciarPagina() {
   renderizarCarta();
   llenarSelectorPlatos();
+  mostrarFurioso(1);
   mostrarNotificacionAleatoria();
   actualizarRecomendacionPersonas();
   marcarSeccionActiva("inicio");
@@ -140,10 +154,13 @@ function renderizarCarta() {
     card.dataset.category = plato.categoria;
 
     card.innerHTML = `
-            <span class="category">${formatearCategoria(plato.categoria)}</span>
-            <h3>${plato.nombre}</h3>
-            <p>${plato.descripcion}</p>
-        `;
+      <div class="menu-card-img" style="background-image: url('${plato.imagen}')" role="img" aria-label="${plato.nombre}"></div>
+      <div class="menu-card-body">
+        <span class="category">${formatearCategoria(plato.categoria)}</span>
+        <h3>${plato.nombre}</h3>
+        <p>${plato.descripcion}</p>
+      </div>
+    `;
 
     menuGrid.appendChild(card);
   });
@@ -203,6 +220,7 @@ function mostrarFurioso(id) {
 
   const imagen = document.getElementById("furiosoImage");
 
+  imagen.style.backgroundImage = `url('${furioso.imagen}')`;
   imagen.className = `food-frame ${furioso.clase}`;
   imagen.setAttribute("aria-label", furioso.nombre);
 
