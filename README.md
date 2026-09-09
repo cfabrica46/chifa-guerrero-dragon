@@ -24,12 +24,26 @@ One Page estatica para el chifa ficticio **El Guerrero Dragon**.
 ## Estructura
 
 ```text
-dist/
+chifa-guerrero-dragon/
 ├── index.html
 ├── css/
 │   └── styles.css
-└── js/
-    └── main.js
+├── js/
+│   └── main.js
+└── img/
+    ├── panda-logo.svg
+    ├── dragon-logo.jpg
+    ├── los-5-furiosos.jpg
+    ├── chaufa-dragon.jpg
+    ├── tallarin-fuego.jpg
+    ├── pollo-crocante.jpg
+    ├── cerdo-char-siu.jpg
+    ├── wantanes-furiosos.jpg
+    ├── aeropuerto-imperial.jpg
+    ├── kam-lu-wantan.jpg
+    ├── gallery-wok.jpg
+    ├── gallery-table.jpg
+    └── gallery-night.jpg
 ```
 
 La logica principal se mantiene en `main.js` para que sea facil de revisar durante la evaluacion.
