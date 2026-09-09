@@ -210,6 +210,12 @@ function aplicarFiltrosCarta() {
   });
 }
 
+function activarAnimacionVisual(elemento) {
+  elemento.classList.remove("visual-switch");
+  void elemento.offsetWidth;
+  elemento.classList.add("visual-switch");
+}
+
 function mostrarFurioso(id) {
   const furioso = furiosos.find((item) => item.id === id);
 
@@ -227,6 +233,9 @@ function mostrarFurioso(id) {
     furioso.descripcion;
   document.getElementById("furiosoImage").src = furioso.imagen;
   document.getElementById("furiosoImage").alt = furioso.nombre;
+
+  const contenedorImagen = imagen.closest(".visual-frame");
+  activarAnimacionVisual(contenedorImagen);
 
   const botones = document.querySelectorAll(".furioso-button");
 
@@ -273,6 +282,9 @@ function cambiarImagenGaleria(src, alt) {
 
   imagenPrincipal.src = src;
   imagenPrincipal.alt = alt;
+
+  const contenedorGaleria = imagenPrincipal.closest(".visual-frame");
+  activarAnimacionVisual(contenedorGaleria);
 }
 
 function copiarTelefono() {

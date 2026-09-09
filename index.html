@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -173,7 +177,7 @@
 
         <div class="furiosos-layout">
           <div class="furioso-display">
-            <figure class="furioso-photo">
+            <figure class="furioso-photo visual-frame">
               <img
                 id="furiosoImage"
                 src="./assets/5furiosos/arroz.png"
@@ -353,11 +357,11 @@
         </div>
 
         <div class="detail-card">
-          <span class="tag">Para compartir</span>
-          <h3>Ven acompanado. O con mucha hambre.</h3>
+          <span class="tag">Guia rapida</span>
+          <h3>La mesa se arma al centro</h3>
           <p>
-            La recomendacion cambia segun la cantidad de personas para demostrar
-            operadores, condiciones y actualizacion del DOM.
+            Los 5 Furiosos esta pensado para compartir como buen chifa: una
+            fuente grande, varios sabores y todos probando un poco de todo.
           </p>
         </div>
       </section>
@@ -370,7 +374,7 @@
         </div>
 
         <div class="gallery-layout">
-          <figure class="gallery-main">
+          <figure class="gallery-main visual-frame">
             <img
               id="galleryMainImage"
               src="./assets/galeria/gallery-wok.jpg"
@@ -471,19 +475,27 @@
 
         <div class="contact-card">
           <span class="tag">Contacto</span>
-          <p id="phoneText">+51 987 654 321</p>
-          <button
-            id="copyPhoneButton"
-            type="button"
-            class="btn btn-secondary"
-            onclick="copiarTelefono()"
-          >
-            Copiar telefono
-          </button>
-          <div class="social-links" aria-label="Redes sociales">
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="TikTok">TK</a>
+          <div class="contact-phone-wrapper">
+            <p id="phoneText">+51 987 654 321</p>
+            <!-- <button
+              id="copyPhoneButton"
+              type="button"
+              class="btn btn-secondary"
+              onclick="copiarTelefono()"
+            >
+              Copiar telefono
+            </button> -->
+            <div class="social-links" aria-label="Redes sociales">
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" aria-label="TikTok">
+                <i class="bi bi-tiktok"></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>
