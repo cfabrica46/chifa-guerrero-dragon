@@ -27,7 +27,13 @@
           onclick="irASeccion('inicio')"
           aria-label="Ir al inicio"
         >
-          <span class="brand-mark">GD</span>
+          <span class="brand-logo">
+            <img
+              src="./assets/hero/logo-isotipo.png"
+              alt="Logo de El Guerrero Dragon"
+            />
+          </span>
+
           <span class="brand-text">
             <strong>El Guerrero Dragon</strong>
             <small>Chifa</small>
@@ -119,18 +125,17 @@
           class="hero-plate"
           aria-label="Presentacion visual del plato Los 5 Furiosos"
         >
-          <div class="plate-card">
-            <span class="tag">Especial de la casa</span>
-            <strong>Los 5 Furiosos</strong>
-            <p>Cinco favoritos. Un solo plato.</p>
-            <div class="plate-visual">
-              <span>Chaufa</span>
-              <span>Tallarin</span>
-              <span>Pollo</span>
-              <span>Cerdo</span>
-              <span>Wantan</span>
-            </div>
-          </div>
+          <figure class="hero-food-card">
+            <img
+              src="./assets/hero/hero.png"
+              alt="Bandeja Los 5 Furiosos con chaufa, tallarin, pollo, cerdo y wantanes"
+            />
+            <figcaption>
+              <span>Especial de la casa</span>
+              <strong>Los 5 Furiosos</strong>
+              <p>Cinco favoritos. Un solo plato.</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -168,12 +173,13 @@
 
         <div class="furiosos-layout">
           <div class="furioso-display">
-            <div
-              id="furiosoImage"
-              class="food-frame"
-              role="img"
-              aria-label="Chaufa Dragon"
-            ></div>
+            <figure class="furioso-photo">
+              <img
+                id="furiosoImage"
+                src="./assets/5furiosos/arroz.png"
+                alt="Chaufa Dragon al wok"
+              />
+            </figure>
             <div>
               <p class="tag">Componente seleccionado</p>
               <h3 id="furiosoName">Chaufa Dragon</h3>

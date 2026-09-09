@@ -48,6 +48,7 @@ const furiosos = [
     id: 1,
     nombre: "Chaufa Dragon",
     descripcion: "Arroz chaufa al wok con pollo, cerdo, huevo y cebolla china.",
+    imagen: "./assets/5furiosos/arroz.png",
     clase: "furioso-1",
   },
   {
@@ -55,6 +56,7 @@ const furiosos = [
     nombre: "Tallarin Fuego",
     descripcion:
       "Tallarines salteados al wok con verduras, pollo y salsa de la casa.",
+    imagen: "./assets/5furiosos/tallarin.png",
     clase: "furioso-2",
   },
   {
@@ -62,6 +64,7 @@ const furiosos = [
     nombre: "Pollo Crocante Agridulce",
     descripcion:
       "Trozos de pollo crocante acompanados con salsa de tamarindo y toque picante suave.",
+    imagen: "./assets/5furiosos/pollo.png",
     clase: "furioso-3",
   },
   {
@@ -69,6 +72,7 @@ const furiosos = [
     nombre: "Cerdo Char Siu",
     descripcion:
       "Cerdo glaseado estilo chifa, servido en laminas y con vegetales salteados.",
+    imagen: "./assets/5furiosos/cerdo.png",
     clase: "furioso-4",
   },
   {
@@ -76,6 +80,7 @@ const furiosos = [
     nombre: "Wantanes Furiosos",
     descripcion:
       "Wantanes rellenos, fritos y acompanados por una salsa especial ligeramente picante.",
+    imagen: "./assets/5furiosos/wantan.png",
     clase: "furioso-5",
   },
 ];
@@ -209,6 +214,8 @@ function mostrarFurioso(id) {
   document.getElementById("furiosoName").textContent = furioso.nombre;
   document.getElementById("furiosoDescription").textContent =
     furioso.descripcion;
+  document.getElementById("furiosoImage").src = furioso.imagen;
+  document.getElementById("furiosoImage").alt = furioso.nombre;
 
   const botones = document.querySelectorAll(".furioso-button");
 
