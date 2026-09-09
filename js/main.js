@@ -4,42 +4,50 @@ const platos = [
     categoria: "especiales",
     descripcion:
       "La bandeja estrella de la casa con cinco favoritos para compartir.",
+    imagen: "./assets/carta/los-5-furiosos.jpg",
   },
   {
     nombre: "Chaufa Dragon",
     categoria: "arroces",
     descripcion: "Arroz chaufa al wok con pollo, cerdo, huevo y cebolla china.",
+    imagen: "./assets/carta/chaufa-dragon.jpg",
   },
   {
     nombre: "Aeropuerto Imperial",
     categoria: "especiales",
     descripcion: "Arroz, tallarin y saltado reunidos en una porcion potente.",
+    imagen: "./assets/carta/aeropuerto-imperial.jpg",
   },
   {
     nombre: "Tallarin al Wok",
     categoria: "tallarines",
     descripcion:
       "Tallarines salteados con verduras frescas y salsa de la casa.",
+    imagen: "./assets/carta/tallarin-fuego.jpg",
   },
   {
     nombre: "Pollo Tipakay",
     categoria: "pollos",
     descripcion: "Pollo crocante con salsa agridulce estilo chifa.",
+    imagen: "./assets/carta/pollo-crocante.jpg",
   },
   {
     nombre: "Kam Lu Wantan",
     categoria: "especiales",
     descripcion: "Wantanes crocantes con salsa tamarindo, carnes y verduras.",
+    imagen: "./assets/carta/kam-lu-wantan.jpg",
   },
   {
     nombre: "Cerdo con Tamarindo",
     categoria: "cerdo",
     descripcion: "Cerdo salteado con salsa de tamarindo y toque ahumado.",
+    imagen: "./assets/carta/cerdo-char-siu.jpg",
   },
   {
     nombre: "Wantan Crocante",
     categoria: "entradas",
     descripcion: "Entrada clasica para compartir antes del plato fuerte.",
+    imagen: "./assets/carta/wantanes-furiosos.jpg",
   },
 ];
 
@@ -145,9 +153,12 @@ function renderizarCarta() {
     card.dataset.category = plato.categoria;
 
     card.innerHTML = `
-            <span class="category">${formatearCategoria(plato.categoria)}</span>
-            <h3>${plato.nombre}</h3>
-            <p>${plato.descripcion}</p>
+    <div class="menu-card-img" style="background-image: url('${plato.imagen}')" role="img" aria-label="${plato.nombre}"></div>
+      <div class="menu-card-body">
+        <span class="category">${formatearCategoria(plato.categoria)}</span>
+        <h3>${plato.nombre}</h3>
+        <p>${plato.descripcion}</p>
+      </div>
         `;
 
     menuGrid.appendChild(card);
@@ -257,19 +268,11 @@ function actualizarRecomendacionPersonas() {
   document.getElementById("peopleMessage").textContent = mensaje;
 }
 
-function cambiarImagenGaleria(clase, alt) {
+function cambiarImagenGaleria(src, alt) {
   const imagenPrincipal = document.getElementById("galleryMainImage");
-  const miniaturas = document.querySelectorAll(".gallery-thumb");
 
-  imagenPrincipal.className = `gallery-main food-frame ${clase}`;
-  imagenPrincipal.setAttribute("aria-label", alt);
-
-  miniaturas.forEach((miniatura) => {
-    miniatura.classList.toggle(
-      "active",
-      miniatura.textContent.toLowerCase() === alt.split(" ")[0].toLowerCase(),
-    );
-  });
+  imagenPrincipal.src = src;
+  imagenPrincipal.alt = alt;
 }
 
 function copiarTelefono() {

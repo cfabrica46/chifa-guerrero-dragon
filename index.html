@@ -370,37 +370,52 @@
         </div>
 
         <div class="gallery-layout">
-          <div
-            id="galleryMainImage"
-            class="gallery-main food-frame gallery-wok"
-            role="img"
-            aria-label="Wok encendido"
-          ></div>
+          <figure class="gallery-main">
+            <img
+              id="galleryMainImage"
+              src="./assets/galeria/gallery-wok.jpg"
+              alt="Wok encendido preparando comida chifa"
+            />
+          </figure>
           <div class="gallery-thumbs">
             <button
               type="button"
               class="gallery-thumb active"
-              onclick="cambiarImagenGaleria('gallery-wok', 'Wok encendido')"
+              onclick="
+                cambiarImagenGaleria(
+                  './assets/galeria/gallery-wok.jpg',
+                  'Wok encendido preparando comida chifa',
+                )
+              "
             >
-              Wok
+              <img src="./assets/galeria/gallery-wok.jpg" alt="" />
+              <span>Wok encendido</span>
             </button>
             <button
               type="button"
               class="gallery-thumb"
               onclick="
-                cambiarImagenGaleria('gallery-table', 'Mesa para compartir')
+                cambiarImagenGaleria(
+                  './assets/galeria/gallery-table.jpg',
+                  'Mesa para compartir',
+                )
               "
             >
-              Mesa
+              <img src="./assets/galeria/gallery-table.jpg" alt="" />
+              <span>Mesa para compartir</span>
             </button>
             <button
               type="button"
               class="gallery-thumb"
               onclick="
-                cambiarImagenGaleria('gallery-night', 'Local urbano nocturno')
+                cambiarImagenGaleria(
+                  './assets/galeria/gallery-night.jpg',
+                  'Local urbano nocturno',
+                )
               "
             >
-              Local
+              <img src="./assets/galeria/gallery-night.jpg" alt="" />
+              <span>Local urbano nocturno</span>
             </button>
           </div>
         </div>
