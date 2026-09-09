@@ -107,7 +107,6 @@ let categoriaActual = "todos";
 function iniciarPagina() {
   renderizarCarta();
   llenarSelectorPlatos();
-  mostrarFurioso(1);
   mostrarNotificacionAleatoria();
   actualizarRecomendacionPersonas();
   marcarSeccionActiva("inicio");
