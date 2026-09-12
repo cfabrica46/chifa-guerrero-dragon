@@ -176,6 +176,7 @@ function llenarSelectorPlatos() {
   });
 }
 
+// Dos
 function filtrarCarta(categoria) {
   categoriaActual = categoria;
 
@@ -188,6 +189,7 @@ function filtrarCarta(categoria) {
   aplicarFiltrosCarta();
 }
 
+// Tres
 function buscarPlatos() {
   aplicarFiltrosCarta();
 }
@@ -244,6 +246,7 @@ function mostrarFurioso(id) {
   });
 }
 
+// Cinco
 function aumentarPersonas() {
   if (cantidadPersonas < 10) {
     cantidadPersonas++;
@@ -308,6 +311,7 @@ function sugerirPlatoAleatorio() {
   document.getElementById("randomDishText").textContent = mensaje;
 }
 
+// Uno
 function procesarSolicitud() {
   const nombre = document.getElementById("nombre").value.trim();
   const plato = document.getElementById("plato").value;

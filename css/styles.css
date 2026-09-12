@@ -949,3 +949,7 @@ h3 {
     transform: translateX(120%);
   }
 }
+
+.bi {
+  color: white;
+}
